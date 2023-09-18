@@ -1,0 +1,24 @@
+package arrays;
+
+public class UniqueElements {
+
+	public static void main(String[] args) {
+
+		int[] a = { 3, 4, 7, 3, 4, 7, 1, 9, 5 };
+
+		for (int i = 0; i < a.length; i++) {
+			int c = 0;
+			for (int j = 0; j < a.length; j++) {
+				if (a[i] == a[j] && i > j) {
+					break;
+				}
+				if (a[i] == a[j]) {
+					c++;
+				}
+			}
+			if (c == 1) {
+				System.out.println(a[i]);
+			}
+		}
+	}
+}
