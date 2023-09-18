@@ -1,0 +1,23 @@
+package arrays;
+
+public class DuplicatesInTheArray {
+
+	public static void main(String[] args) {
+
+		int[] a = { 2, 3, 4, 5, 6, 7, 8, 9, 9, 8 };
+		for (int i = 0; i < a.length; i++) {
+			int c = 0;
+			for (int j = 0; j < a.length; j++) {
+				if (a[i] == a[j] && i > j) {
+					break;
+				}
+				if (a[i] == a[j]) {
+					c++;
+				}
+			}
+			if (c >= 2) {
+				System.out.print(a[i]);
+			}
+		}
+	}
+}
